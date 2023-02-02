@@ -1,0 +1,29 @@
+---
+
+- hosts: infra
+  remote_user: ferios
+  become: yes
+  become_method: sudo
+  roles:
+      - prerequisites
+
+
+
+- hosts: db
+  remote_user: ferios
+  become: yes
+  become_method: sudo
+  roles:
+      - mongodb
+
+
+- hosts: web
+  remote_user: ferios
+  become: yes
+  become_method: sudo
+  vars:
+    var_node: /tmp
+  roles:
+      - nodejs
+
+

@@ -1,0 +1,10 @@
+# tasks file for prerequisites
+---
+- name: Install dependencies
+  apt:
+     name: 
+      - git
+      - apt-transport-https
+      - gnupg2
+     state: present
+     update_cache: yes

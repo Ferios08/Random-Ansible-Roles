@@ -1,0 +1,6 @@
+---
+# Install Node
+- import_tasks: install.yml
+
+# After install setup
+- import_tasks: install.yml
